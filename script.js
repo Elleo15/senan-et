@@ -526,12 +526,19 @@ function initSlider() {
   });
   wrap.addEventListener('mouseleave', () => { isDragging = false; dragOffset = 0; });
 
-  wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  wrap.addEventListener('touchend', e => {
-    const diff = e.changedTouches[0].clientX - startX;
-    if (diff < -50) goTo(current + 1);
-    else if (diff > 50) goTo(current - 1);
-  });
+  wrap.addEventListener('touchstart', e => { 
+  startX = e.touches[0].clientX; 
+}, { passive: true });
+
+wrap.addEventListener('touchmove', e => {
+  e.preventDefault();
+}, { passive: false });
+
+wrap.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].clientX - startX;
+  if (diff < -40) goTo(current + 1);
+  else if (diff > 40) goTo(current - 1);
+}, { passive: true });
 
   window.addEventListener('resize', () => goTo(current));
 }
