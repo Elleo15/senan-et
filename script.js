@@ -478,7 +478,25 @@ function initSmoothScroll() {
     });
   });
 }
+initLightbox();
+function initLightbox() {
+  const lb    = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
 
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lb.classList.add('open');
+    });
+  });
+
+  lbClose.addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) lb.classList.remove('open');
+  });
+}
 // -----------------------------------------------
 // Init all
 // -----------------------------------------------
