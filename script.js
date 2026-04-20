@@ -453,7 +453,7 @@ function initLightbox() {
   const lbImg = document.getElementById('lbImg');
   const lbClose = document.getElementById('lbClose');
 
-  document.querySelectorAll('.gallery-item img').forEach(img => {
+  document.querySelectorAll('.slide-item img').forEach(img => {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
       lbImg.src = img.src;
