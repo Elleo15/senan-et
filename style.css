@@ -511,7 +511,7 @@ button {
   position: relative;
   background-image: url("images/vitrin-window.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-attachment: fixed;
 }
 .about::after {
