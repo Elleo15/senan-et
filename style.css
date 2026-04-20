@@ -1195,5 +1195,6 @@ button {
 @media (max-width: 480px) {
   .slide-item {
     flex: 0 0 calc(80% - 8px);
+    aspect-ratio: 3 / 4;
   }
 }
