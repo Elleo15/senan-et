@@ -27,6 +27,9 @@ const translations = {
     stat_halal: "Halal",
     stat_fresh: "Təzəlik",
     about_cta: "WhatsApp ilə Əlaqə",
+    gallery_tag: "Məhsullarımız",
+    gallery_title: "El işi, Ürək işi",
+    gallery_desc: "Hər parça ət peşəkar əllərlə, sevgiylə hazırlanır.",
     
     order_tag: "Ön Sifariş",
     order_title: "Sifarişinizi\nƏvvəlcədən Verin",
@@ -86,6 +89,9 @@ const translations = {
     stat_halal: "Халяль",
     stat_fresh: "Свежесть",
     about_cta: "Написать в WhatsApp",
+    gallery_tag: "Наши продукты",
+    gallery_title: "Ручная работа, с душой",
+    gallery_desc: "Каждый кусок мяса готовится профессиональными руками с любовью.",
     
     order_tag: "Предзаказ",
     order_title: "Оформите заказ\nзаранее",
@@ -143,6 +149,9 @@ const translations = {
     stat_halal: "Halal",
     stat_fresh: "Freshness",
     about_cta: "Contact via WhatsApp",
+    gallery_tag: "Our Products",
+    gallery_title: "Handcrafted, Heartfelt",
+    gallery_desc: "Every cut prepared by skilled hands with passion.",
     
     order_tag: "Pre-Order",
     order_title: "Place Your Order\nin Advance",
@@ -438,7 +447,7 @@ function initSmoothScroll() {
     });
   });
 }
-initLightbox();
+
 function initLightbox() {
   const lb    = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
@@ -457,6 +466,75 @@ function initLightbox() {
     if (e.target === lb) lb.classList.remove('open');
   });
 }
+function initSlider() {
+  const track = document.querySelector('.slider-track');
+  const dotsWrap = document.getElementById('sliderDots');
+  if (!track) return;
+
+  const items = track.querySelectorAll('.slide-item');
+  const total = items.length;
+  let current = 0;
+  let startX = 0;
+  let isDragging = false;
+  let dragOffset = 0;
+
+  function getVisible() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, total - getVisible());
+  }
+
+  function getItemWidth() {
+    return items[0].offsetWidth + 16;
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, maxIndex()));
+    track.style.transform = `translateX(-${current * getItemWidth()}px)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  // Dots
+  const dots = [];
+  for (let i = 0; i <= maxIndex(); i++) {
+    const dot = document.createElement('button');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Slayd ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+    dots.push(dot);
+  }
+
+  // Buttons
+  document.querySelector('.slider-prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.slider-next').addEventListener('click', () => goTo(current + 1));
+
+  // Touch / drag
+  const wrap = document.getElementById('sliderTrack');
+  wrap.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; });
+  wrap.addEventListener('mousemove', e => { if (!isDragging) return; dragOffset = e.clientX - startX; });
+  wrap.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    if (dragOffset < -50) goTo(current + 1);
+    else if (dragOffset > 50) goTo(current - 1);
+    dragOffset = 0;
+  });
+  wrap.addEventListener('mouseleave', () => { isDragging = false; dragOffset = 0; });
+
+  wrap.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  wrap.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (diff < -50) goTo(current + 1);
+    else if (diff > 50) goTo(current - 1);
+  });
+
+  window.addEventListener('resize', () => goTo(current));
+}
 // -----------------------------------------------
 // Init all
 // -----------------------------------------------
@@ -468,5 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initOrderForm();
   initDateInput();
   initSmoothScroll();
-  applyTranslations("az"); // default language
+  initLightbox();
+  initSlider();
+  applyTranslations("az");
 });
