@@ -1,5 +1,5 @@
 /* =============================================
-   SƏNƏN ƏT — script.js
+   SƏNAN ƏT — script.js
    ============================================= */
 
 "use strict";
@@ -20,7 +20,7 @@ const translations = {
     about_tag: "Mən kiməm?",
     about_title: "Peşəkar Qəssab,\nƏsl Dadı",
     about_p1:
-      "Sənən Ət — Sumqayıtda fəaliyyət göstərən, təzə və halal ət satan ixtisaslaşmış qəssab mağazasıdır. Hər gün yeni mal, quzu və digər növ ətlər müştərilərimizin xidmətindədir.",
+      "Sənan Ət — Sumqayıtda fəaliyyət göstərən, təzə və halal ət satan ixtisaslaşmış qəssab mağazasıdır. Hər gün yeni mal, quzu və digər növ ətlər müştərilərimizin xidmətindədir.",
     about_p2:
       "Peşəkar kəsim texnikası, gigiyenik mühit və mehriban xidmətlə sizin üçün ən yaxşısını hazırlayırıq. Hər parça ət əlimizdən keçir — keyfiyyətə zəmanət veririk.",
     stat_years: "İllik Təcrübə",
@@ -82,7 +82,7 @@ const translations = {
     about_tag: "Кто я?",
     about_title: "Профессиональный\nмясник",
     about_p1:
-      "Sənən Ət — специализированный мясной магазин в Сумгаите, торгующий свежим халяльным мясом. Каждый день в наличии говядина, баранина и другие виды мяса.",
+      "Sənan Ət — специализированный мясной магазин в Сумгаите, торгующий свежим халяльным мясом. Каждый день в наличии говядина, баранина и другие виды мяса.",
     about_p2:
       "Профессиональная разделка, гигиеничная среда и дружелюбный сервис. Каждый кусок мяса проходит через наши руки — гарантируем качество.",
     stat_years: "Лет опыта",
@@ -142,7 +142,7 @@ const translations = {
     about_tag: "Who am I?",
     about_title: "Master Butcher,\nReal Taste",
     about_p1:
-      "Sənən Ət is a specialized butcher shop in Sumqayit, offering fresh halal beef, lamb, and other premium cuts every day for our valued customers.",
+      "Sənan Ət is a specialized butcher shop in Sumqayit, offering fresh halal beef, lamb, and other premium cuts every day for our valued customers.",
     about_p2:
       "Professional cutting technique, hygienic environment, and friendly service. Every piece of meat passes through our hands — we guarantee quality.",
     stat_years: "Years Experience",
@@ -362,7 +362,7 @@ function initOrderForm() {
     }
 
     const msg = [
-      `🥩 *Sənən Ət — ${t.order_tag || "Sifariş"}*`,
+      `🥩 *Sənan Ət — ${t.order_tag || "Sifariş"}*`,
       ``,
       `👤 *${t.wa_name}:* ${fullName}`,
       `📞 *${t.wa_phone}:* ${phone}`,
