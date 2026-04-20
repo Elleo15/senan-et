@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sənən Ət — Sumqayıt</title>
+    <meta
+      name="description"
+      content="Sənən Ət — Sumqayıtın ən keyfiyyətli ət mağazası. Təzə, halal, kənd əti."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-main">SƏNƏN</span>
+          <span class="logo-sub">ƏT</span>
+        </a>
+        <div class="nav-center">
+          <a href="#about" class="nav-link" data-i18n="nav_about">Haqqımda</a>
+          <a href="#gallery" class="nav-link" data-i18n="nav_gallery"
+            >Məhsullar</a
+          >
+          <a href="#order" class="nav-link" data-i18n="nav_order">Sifariş</a>
+          <a href="#contact" class="nav-link" data-i18n="nav_contact">Əlaqə</a>
+        </div>
+        <div class="nav-right">
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="az">AZ</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mob-link" data-i18n="nav_about">Haqqımda</a>
+        <a href="#gallery" class="mob-link" data-i18n="nav_gallery"
+          >Məhsullar</a
+        >
+        <a href="#order" class="mob-link" data-i18n="nav_order">Sifariş</a>
+        <a href="#contact" class="mob-link" data-i18n="nav_contact">Əlaqə</a>
+        <div class="mob-lang">
+          <button class="lang-btn active" data-lang="az">AZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img
+          src="images/senan-et-store.jpg"
+          alt="Sənən Ət Mağazası"
+          class="hero-img"
+        />
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-tag" data-i18n="hero_tag">Sumqayıt • Keyfiyyətli Ət</p>
+        <h1 class="hero-title">
+          <span class="ht-line">SƏNƏN</span>
+          <span class="ht-line ht-accent">ƏT</span>
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub">Təzə · Halal · Kənd əti</p>
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-primary" data-i18n="hero_cta"
+            >Sifariş Et</a
+          >
+          <a href="#gallery" class="btn btn-ghost" data-i18n="hero_gallery"
+            >Məhsullara Bax</a
+          >
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images">
+            <div class="about-img-main">
+              <img
+                src="images/senan-pozition.jpg"
+                alt="Sənən Ət ustası"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="about-text">
+            <span class="section-tag" data-i18n="about_tag">Biz kimik?</span>
+            <h2 class="section-title" data-i18n="about_title">
+              Peşəkar Qəssab,<br />Əsl Dadı
+            </h2>
+            <p data-i18n="about_p1">
+              Sənən Ət — Sumqayıtda fəaliyyət göstərən, təzə və halal ət satan
+              ixtisaslaşmış qəssab mağazasıdır. Hər gün yeni mal, quzu və digər
+              növ ətlər müştərilərimizin xidmətindədir.
+            </p>
+            <p data-i18n="about_p2">
+              Peşəkar kəsim texnikası, gigiyenik mühit və mehriban xidmətlə
+              sizin üçün ən yaxşısını hazırlayırıq. Hər parça ət əlimizdən keçir
+              — keyfiyyətə zəmanət veririk.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-num">10+</span>
+                <span class="stat-label" data-i18n="stat_years"
+                  >İllik Təcrübə</span
+                >
+              </div>
+              <div class="stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label" data-i18n="stat_halal">Halal</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">∞</span>
+                <span class="stat-label" data-i18n="stat_fresh">Təzəlik</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/994516500099"
+              target="_blank"
+              class="btn btn-primary"
+              data-i18n="about_cta"
+              >WhatsApp ilə Əlaqə</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="gallery_tag">Məhsullarımız</span>
+          <h2 class="section-title" data-i18n="gallery_title">
+            El işi, Ürək işi
+          </h2>
+          <p class="section-desc" data-i18n="gallery_desc">
+            Hər parça ət peşəkar əllərlə, sevgiylə hazırlanır.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item gi-large">
+            <img src="images/handcraft-2.jpg" alt="Quzu əti" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_lamb">Quzu əti</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-4.jpg" alt="Dana əti" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_beef">Dana əti</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-1.jpg" alt="Qabırğa" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_ribs">Qabırğa</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-5.jpg" alt="Sümüklü ət" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_bone">Sümüklü ət</span>
+            </div>
+          </div>
+          <div class="gallery-item gi-tall">
+            <img src="images/senan-main.jpg" alt="Usta" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_master">Usta qəssab</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/handcraft-6.jpg"
+              alt="Dana kəsimi"
+              loading="lazy"
+            />
+            <div class="gi-overlay">
+              <span data-i18n="meat_cut">Kəsim</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-7.jpg" alt="Tər ət" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_fresh2">Tər ət</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-8.jpg" alt="Sifariş" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_order2">Sifariş hazır</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-3.jpg" alt="Çiy ət" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_raw">Çiy ət</span>
+            </div>
+          </div>
+          <div class="gallery-item gi-wide">
+            <img src="images/handcraft-9.jpg" alt="Çeşid" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_variety">Geniş çeşid</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/handcraft-10.jpg" alt="Arxa ət" loading="lazy" />
+            <div class="gi-overlay">
+              <span data-i18n="meat_back">Arxa hissə</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER FORM -->
+    <section class="order" id="order">
+      <div class="order-bg">
+        <img src="images/handcraft-2.jpg" alt="bg" class="order-bg-img" />
+        <div class="order-bg-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="order-wrap">
+          <div class="order-info">
+            <span class="section-tag light" data-i18n="order_tag"
+              >Ön Sifariş</span
+            >
+            <h2 class="section-title light" data-i18n="order_title">
+              Sifarişinizi<br />Əvvəlcədən Verin
+            </h2>
+            <p data-i18n="order_desc">
+              Formu doldurun, sifarişiniz birbaşa WhatsApp-a göndərilsin. Tez,
+              rahat, etibarlı.
+            </p>
+            <div class="order-contact-list">
+              <a
+                href="https://wa.me/994516500099"
+                target="_blank"
+                class="oc-item"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                  />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.522 5.843L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.988-1.362l-.356-.211-3.696.969.987-3.609-.232-.371A9.79 9.79 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"
+                  />
+                </svg>
+                +994 51 650 00 99
+              </a>
+              <a
+                href="https://www.instagram.com/senann_et/"
+                target="_blank"
+                class="oc-item"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+                @senann_et
+              </a>
+            </div>
+          </div>
+          <form class="order-form" id="orderForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="form_name">Ad</label>
+                <input
+                  type="text"
+                  id="f-name"
+                  placeholder="Adınız"
+                  data-i18n-ph="ph_name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_surname">Soyad</label>
+                <input
+                  type="text"
+                  id="f-surname"
+                  placeholder="Soyadınız"
+                  data-i18n-ph="ph_surname"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_phone">Telefon</label>
+              <input
+                type="tel"
+                id="f-phone"
+                placeholder="+994 XX XXX XX XX"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_meat">Nə istəyirsiniz?</label>
+              <textarea
+                id="f-meat"
+                rows="3"
+                placeholder="Məs: 3 kq quzu əti, 2 kq dana döş..."
+                data-i18n-ph="ph_meat"
+                required
+              ></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="form_date">Tarix</label>
+                <input type="date" id="f-date" required />
+              </div>
+              <div class="form-group">
+                <label data-i18n="form_time">Saat</label>
+                <input type="time" id="f-time" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_note">Əlavə qeyd</label>
+              <textarea
+                id="f-note"
+                rows="2"
+                placeholder="Hər hansı xahiş..."
+                data-i18n-ph="ph_note"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-whatsapp">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.522 5.843L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.988-1.362l-.356-.211-3.696.969.987-3.609-.232-.371A9.79 9.79 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"
+                />
+              </svg>
+              <span data-i18n="form_send">WhatsApp-a Göndər</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- MAP SECTION -->
+    <section class="map-section" id="map">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="map_tag">Bizim Ünvan</span>
+          <h2 class="section-title" data-i18n="map_title">Bizi Tapın</h2>
+        </div>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.google.com/maps?q=40.5594505,49.6996878&z=17&output=embed"
+          width="100%"
+          height="460"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+
+        <div class="map-card">
+          <p class="map-name">SƏNƏN ƏT</p>
+          <p class="map-addr">General Məhəmməd Əsədov küç., Sumqayıt</p>
+          <a
+            href="https://www.google.com/maps?q=40.5594505,49.6996878"
+            target="_blank"
+            class="btn btn-primary"
+            data-i18n="map_directions"
+            >Yol Göstər</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT / FOOTER -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="footer-logo-main">SƏNƏN</span>
+            <span class="footer-logo-sub">ƏT</span>
+            <p data-i18n="footer_tagline">
+              Sumqayıtın ən keyfiyyətli ət mağazası
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4 data-i18n="footer_menu">Menyu</h4>
+            <a href="#about" data-i18n="nav_about">Haqqımda</a>
+            <a href="#gallery" data-i18n="nav_gallery">Məhsullar</a>
+            <a href="#order" data-i18n="nav_order">Sifariş</a>
+          </div>
+          <div class="footer-social">
+            <h4 data-i18n="footer_follow">Bizi izləyin</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/senann_et/"
+                target="_blank"
+                class="soc-icon soc-ig"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@senan_et"
+                target="_blank"
+                class="soc-icon soc-tt"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://wa.me/994516500099"
+                target="_blank"
+                class="soc-icon soc-wa"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                  />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.522 5.843L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.988-1.362l-.356-.211-3.696.969.987-3.609-.232-.371A9.79 9.79 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Sənən Ət.
+            <span data-i18n="footer_rights">Bütün hüquqlar qorunur.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/994516500099"
+      target="_blank"
+      class="wa-float"
+      aria-label="WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+        />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.522 5.843L.057 23.882l6.19-1.624A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-4.988-1.362l-.356-.211-3.696.969.987-3.609-.232-.371A9.79 9.79 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"
+        />
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
