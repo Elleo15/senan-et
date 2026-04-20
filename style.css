@@ -1052,15 +1052,7 @@ button {
   .gi-tall {
     grid-row: span 1;
   }
-   .gi-large {
-  grid-row: span 1;
-}
-.gallery-grid {
-  grid-auto-rows: auto;
-}
-.gallery-item {
-  min-height: 180px;
-}
+  
   .footer-top {
     grid-template-columns: 1fr;
   }
