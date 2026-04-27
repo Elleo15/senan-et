@@ -801,6 +801,12 @@ button {
 .footer-links a:hover {
   color: var(--clr-text);
 }
+.developer-credit{
+ text-align:center;
+ margin-top:15px;
+ font-size:14px;
+ color:#888;
+}
 .social-icons {
   display: flex;
   gap: 0.75rem;
